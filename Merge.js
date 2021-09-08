@@ -1,17 +1,17 @@
-const merge = function(left, right){
+const merge = function (left, right) {
     const result = [];
-    while(left.length !==0 && right.length !==0){
-        if(left[0] <= right[0]){
+    while (left.length !== 0 && right.length !== 0) {
+        if (left[0] <= right[0]) {
             result.push(left.shift())
-        }else{
+        } else {
             result.push(right.shift())
         }
     }
     return [...result, ...left, ...right]
 }
 
-const mergeSort = function(arr){
-    if(arr.length === 1){
+const mergeSort = function (arr) {
+    if (arr.length === 1) {
         return arr
     };
     const mid = Math.floor(arr.length / 2);
